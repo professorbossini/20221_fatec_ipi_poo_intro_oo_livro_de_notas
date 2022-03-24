@@ -1,13 +1,17 @@
+import static javax.swing.JOptionPane.showInputDialog;
 public class Principal {
     public static void main(String[] args) {
-        //variável de referência
-        //você não quer chamar de ponteiro
-        //mas é um ponteiro
-        // Scanner s = new Scanner (System.in);
-        // s.nextInt();
-        LivroDeNotas livroDeNotas;
+        String nomeDoCurso = showInputDialog("Digite o nome do curso");
+       LivroDeNotas livro = new LivroDeNotas();
+       livro.nomeDoCurso = nomeDoCurso;
+       livro.exibirMensagem();
 
-        livroDeNotas = new LivroDeNotas();
-        livroDeNotas.exibirMensagem();
+       LivroDeNotas livro2 = new LivroDeNotas();
+       livro2.nomeDoCurso = showInputDialog("Digite o segundo nome");
+       livro2.exibirMensagem();
+
+       LivroDeNotas.exibirMensagem();
+       JOptionPane.showInputDialog("");
+
     }
 }
